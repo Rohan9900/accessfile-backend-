@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <style>
+      body {
+        margin: 0px;
+      }
+      .formData {
+        background-color: darkcyan;
+        width: 100%;
+      }
+      form {
+        font-size: 1.5em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+      form input {
+        margin: 10px;
+        padding: 10px 20px;
+      }
+      form div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      label {
+        margin-right: 10px;
+        padding: 10px;
+        width: 100px;
+      }
+      p {
+        color: red;
+        font-size: 0.5em !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="formData">
+      <h1 style="text-align: center">Registeration Form</h1>
+      <form
+        method="post"
+        action="/senddata"
+        name="simpleForm"
+        onsubmit="validateForm()"
+      >
+        <div>
+          <label for="id">Id: </label>
+          <div style="display: flex; flex-direction: column">
+            <input
+              type="number"
+              id="id"
+              required
+              name="id"
+              placeholder="Enter Your Id"
+            />
+            <p id="id1"></p>
+          </div>
+        </div>
+
+        <div>
+          <label for="name">Name: </label>
+          <div style="display: flex; flex-direction: column">
+            <input
+              type="text"
+              id="name"
+              required
+              name="name"
+              placeholder="Enter Your Name"
+            />
+            <p id="name1"></p>
+          </div>
+        </div>
+        <div>
+          <label for="address">Address: </label>
+          <div style="display: flex; flex-direction: column">
+            <input
+              type="text"
+              id="address"
+              required
+              name="address"
+              placeholder="Enter Your Address"
+            />
+            <p id="address1"></p>
+          </div>
+        </div>
+        <div>
+          <label for="fnd">F&D: </label>
+          <div style="display: flex; flex-direction: column">
+            <input
+              type="number"
+              id="fnd"
+              required
+              name="fnd"
+              placeholder="Enter Your FND Marks"
+            />
+            <p id="fnd1"></p>
+          </div>
+        </div>
+        <div>
+          <label for="pa">PA: </label>
+          <div style="display: flex; flex-direction: column">
+            <input
+              type="number"
+              id="pa"
+              required
+              name="pa"
+              placeholder="Enter Your PA Marks"
+            />
+            <p id="pa1"></p>
+          </div>
+        </div>
+        <div>
+          <label for="bee">BEE: </label>
+          <div style="display: flex; flex-direction: column">
+            <input
+              type="number"
+              id="bee"
+              required
+              name="bee"
+              placeholder="Enter Your BEE Marks"
+            />
+            <p id="bee1"></p>
+          </div>
+        </div>
+        <div>
+          <label for="dsa">DSA: </label>
+          <div style="display: flex; flex-direction: column">
+            <input
+              type="number"
+              id="dsa"
+              required
+              name="dsa"
+              placeholder="Enter Your DSA Marks"
+            />
+            <p id="dsa1"></p>
+          </div>
+        </div>
+        <div>
+          <label for="iot">IOT: </label>
+          <div style="display: flex; flex-direction: column">
+            <input
+              type="number"
+              required
+              id="iot"
+              name="iot"
+              placeholder="Enter Your IOT Marks"
+            />
+            <p id="iot1"></p>
+          </div>
+        </div>
+
+        <input type="submit" />
+      </form>
+    </div>
+    <script>
+      function validateForm() {
+        if (document.getElementById("id").value == "") {
+          document.getElementById("id1").innerText = "*Please fill the field";
+        }
+        if (document.getElementById("name").value == "") {
+          document.getElementById("name1").innerText = "*Please fill the field";
+        }
+        if (document.getElementById("address").value == "") {
+          document.getElementById("address1").innerText =
+            "*Please fill the field";
+        }
+        if (document.getElementById("fnd").value == "") {
+          document.getElementById("fnd1").innerText = "*Please fill the field";
+        }
+        if (document.getElementById("pa").value == "") {
+          document.getElementById("pa1").innerText = "*Please fill the field";
+        }
+        if (document.getElementById("bee").value == "") {
+          document.getElementById("bee1").innerText = "*Please fill the field";
+        }
+        if (document.getElementById("dsa").value == "") {
+          document.getElementById("dsa1").innerText = "*Please fill the field";
+        }
+        if (document.getElementById("iot").value == "") {
+          document.getElementById("iot1").innerText = "*Please fill the field";
+        }
+      }
+    </script>
+  </body>
+</html>
